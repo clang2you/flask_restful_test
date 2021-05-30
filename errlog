@@ -1,0 +1,203 @@
+[2021-05-30 18:34:22 +0800] [29114] [INFO] Starting gunicorn 20.1.0
+[2021-05-30 18:34:22 +0800] [29114] [INFO] Listening at: http://0.0.0.0:8081 (29114)
+[2021-05-30 18:34:22 +0800] [29114] [INFO] Using worker: gevent
+[2021-05-30 18:34:22 +0800] [29157] [INFO] Booting worker with pid: 29157
+[2021-05-30 18:34:22 +0800] [29159] [INFO] Booting worker with pid: 29159
+[2021-05-30 18:34:22 +0800] [29174] [INFO] Booting worker with pid: 29174
+[2021-05-30 18:34:22 +0800] [29176] [INFO] Booting worker with pid: 29176
+[2021-05-30 18:34:22 +0800] [29157] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/home/parallels/.pyenv/versions/3.7.10/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/parallels/Desktop/flask-swagger-test/api.py", line 37, in <module>
+    app.run(debug=True)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gevent/_socketcommon.py", line 563, in bind
+    return self._sock.bind(address)
+OSError: [Errno 98] Address already in use
+[2021-05-30 18:34:22 +0800] [29157] [INFO] Worker exiting (pid: 29157)
+[2021-05-30 18:34:22 +0800] [29176] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/arbiter.py", line 589, in spawn_worker
+    worker.init_process()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/ggevent.py", line 146, in init_process
+    super().init_process()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gunicorn/util.py", line 359, in import_app
+    mod = importlib.import_module(module)
+  File "/home/parallels/.pyenv/versions/3.7.10/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/parallels/Desktop/flask-swagger-test/api.py", line 37, in <module>
+    app.run(debug=True)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/werkzeug/serving.py", line 982, in run_simple
+    s.bind(server_address)
+  File "/home/parallels/.cache/pypoetry/virtualenvs/flask-swagger-test-Xzb7uooh-py3.7/lib/python3.7/site-packages/gevent/_socketcommon.py", line 563, in bind
+    return self._sock.bind(address)
+OSError: [Errno 98] Address already in use
+[2021-05-30 18:34:22 +0800] [29176] [INFO] Worker exiting (pid: 29176)
+[2021-05-30 18:34:22 +0800] [29114] [INFO] Shutting down: Master
+[2021-05-30 18:34:23 +0800] [29190] [INFO] Starting gunicorn 20.1.0
+[2021-05-30 18:34:23 +0800] [29190] [INFO] Listening at: http://0.0.0.0:8081 (29190)
+[2021-05-30 18:34:23 +0800] [29190] [INFO] Using worker: gevent
+[2021-05-30 18:34:23 +0800] [29197] [INFO] Booting worker with pid: 29197
+[2021-05-30 18:34:23 +0800] [29199] [INFO] Booting worker with pid: 29199
+[2021-05-30 18:34:23 +0800] [29200] [INFO] Booting worker with pid: 29200
+[2021-05-30 18:34:23 +0800] [29201] [INFO] Booting worker with pid: 29201
+[2021-05-30 18:34:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29197)
+[2021-05-30 18:34:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29199)
+[2021-05-30 18:34:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29200)
+[2021-05-30 18:34:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29201)
+[2021-05-30 18:34:53 +0800] [29197] [INFO] Worker exiting (pid: 29197)
+[2021-05-30 18:34:53 +0800] [29199] [INFO] Worker exiting (pid: 29199)
+[2021-05-30 18:34:53 +0800] [29200] [INFO] Worker exiting (pid: 29200)
+[2021-05-30 18:34:53 +0800] [29201] [INFO] Worker exiting (pid: 29201)
+[2021-05-30 18:34:53 +0800] [29190] [WARNING] Worker with pid 29199 was terminated due to signal 9
+[2021-05-30 18:34:53 +0800] [29190] [WARNING] Worker with pid 29201 was terminated due to signal 9
+[2021-05-30 18:34:53 +0800] [29365] [INFO] Booting worker with pid: 29365
+[2021-05-30 18:34:53 +0800] [29190] [WARNING] Worker with pid 29200 was terminated due to signal 9
+[2021-05-30 18:34:53 +0800] [29366] [INFO] Booting worker with pid: 29366
+[2021-05-30 18:34:53 +0800] [29367] [INFO] Booting worker with pid: 29367
+[2021-05-30 18:34:53 +0800] [29368] [INFO] Booting worker with pid: 29368
+[2021-05-30 18:35:23 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29365)
+[2021-05-30 18:35:23 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29366)
+[2021-05-30 18:35:23 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29367)
+[2021-05-30 18:35:23 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29368)
+[2021-05-30 18:35:23 +0800] [29365] [INFO] Worker exiting (pid: 29365)
+[2021-05-30 18:35:23 +0800] [29368] [INFO] Worker exiting (pid: 29368)
+[2021-05-30 18:35:23 +0800] [29366] [INFO] Worker exiting (pid: 29366)
+[2021-05-30 18:35:23 +0800] [29367] [INFO] Worker exiting (pid: 29367)
+[2021-05-30 18:35:23 +0800] [29190] [WARNING] Worker with pid 29366 was terminated due to signal 9
+[2021-05-30 18:35:23 +0800] [29190] [WARNING] Worker with pid 29368 was terminated due to signal 9
+[2021-05-30 18:35:23 +0800] [29190] [WARNING] Worker with pid 29367 was terminated due to signal 9
+[2021-05-30 18:35:23 +0800] [29499] [INFO] Booting worker with pid: 29499
+[2021-05-30 18:35:23 +0800] [29500] [INFO] Booting worker with pid: 29500
+[2021-05-30 18:35:23 +0800] [29501] [INFO] Booting worker with pid: 29501
+[2021-05-30 18:35:23 +0800] [29502] [INFO] Booting worker with pid: 29502
+[2021-05-30 18:35:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29499)
+[2021-05-30 18:35:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29500)
+[2021-05-30 18:35:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29501)
+[2021-05-30 18:35:53 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29502)
+[2021-05-30 18:35:53 +0800] [29499] [INFO] Worker exiting (pid: 29499)
+[2021-05-30 18:35:53 +0800] [29500] [INFO] Worker exiting (pid: 29500)
+[2021-05-30 18:35:53 +0800] [29501] [INFO] Worker exiting (pid: 29501)
+[2021-05-30 18:35:53 +0800] [29502] [INFO] Worker exiting (pid: 29502)
+[2021-05-30 18:35:54 +0800] [29190] [WARNING] Worker with pid 29501 was terminated due to signal 9
+[2021-05-30 18:35:54 +0800] [29672] [INFO] Booting worker with pid: 29672
+[2021-05-30 18:35:54 +0800] [29673] [INFO] Booting worker with pid: 29673
+[2021-05-30 18:35:54 +0800] [29674] [INFO] Booting worker with pid: 29674
+[2021-05-30 18:35:54 +0800] [29675] [INFO] Booting worker with pid: 29675
+[2021-05-30 18:35:55 +0800] [29685] [INFO] Starting gunicorn 20.1.0
+[2021-05-30 18:36:24 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29672)
+[2021-05-30 18:36:24 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29673)
+[2021-05-30 18:36:24 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29674)
+[2021-05-30 18:36:24 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29675)
+[2021-05-30 18:36:24 +0800] [29674] [INFO] Worker exiting (pid: 29674)
+[2021-05-30 18:36:24 +0800] [29673] [INFO] Worker exiting (pid: 29673)
+[2021-05-30 18:36:24 +0800] [29672] [INFO] Worker exiting (pid: 29672)
+[2021-05-30 18:36:24 +0800] [29675] [INFO] Worker exiting (pid: 29675)
+[2021-05-30 18:36:24 +0800] [29190] [WARNING] Worker with pid 29672 was terminated due to signal 9
+[2021-05-30 18:36:24 +0800] [29190] [WARNING] Worker with pid 29675 was terminated due to signal 9
+[2021-05-30 18:36:24 +0800] [29190] [WARNING] Worker with pid 29673 was terminated due to signal 9
+[2021-05-30 18:36:24 +0800] [29893] [INFO] Booting worker with pid: 29893
+[2021-05-30 18:36:24 +0800] [29894] [INFO] Booting worker with pid: 29894
+[2021-05-30 18:36:24 +0800] [29895] [INFO] Booting worker with pid: 29895
+[2021-05-30 18:36:24 +0800] [29896] [INFO] Booting worker with pid: 29896
+[2021-05-30 18:36:54 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29893)
+[2021-05-30 18:36:54 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29894)
+[2021-05-30 18:36:54 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29895)
+[2021-05-30 18:36:54 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:29896)
+[2021-05-30 18:36:54 +0800] [29893] [INFO] Worker exiting (pid: 29893)
+[2021-05-30 18:36:54 +0800] [29896] [INFO] Worker exiting (pid: 29896)
+[2021-05-30 18:36:54 +0800] [29895] [INFO] Worker exiting (pid: 29895)
+[2021-05-30 18:36:54 +0800] [29894] [INFO] Worker exiting (pid: 29894)
+[2021-05-30 18:36:54 +0800] [29190] [WARNING] Worker with pid 29895 was terminated due to signal 9
+[2021-05-30 18:36:54 +0800] [29190] [WARNING] Worker with pid 29896 was terminated due to signal 9
+[2021-05-30 18:36:54 +0800] [30093] [INFO] Booting worker with pid: 30093
+[2021-05-30 18:36:54 +0800] [29190] [WARNING] Worker with pid 29894 was terminated due to signal 9
+[2021-05-30 18:36:54 +0800] [30094] [INFO] Booting worker with pid: 30094
+[2021-05-30 18:36:54 +0800] [30095] [INFO] Booting worker with pid: 30095
+[2021-05-30 18:36:55 +0800] [30096] [INFO] Booting worker with pid: 30096
+[2021-05-30 18:37:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30093)
+[2021-05-30 18:37:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30094)
+[2021-05-30 18:37:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30095)
+[2021-05-30 18:37:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30096)
+[2021-05-30 18:37:25 +0800] [30094] [INFO] Worker exiting (pid: 30094)
+[2021-05-30 18:37:25 +0800] [30095] [INFO] Worker exiting (pid: 30095)
+[2021-05-30 18:37:25 +0800] [30096] [INFO] Worker exiting (pid: 30096)
+[2021-05-30 18:37:25 +0800] [30093] [INFO] Worker exiting (pid: 30093)
+[2021-05-30 18:37:25 +0800] [29190] [WARNING] Worker with pid 30096 was terminated due to signal 9
+[2021-05-30 18:37:25 +0800] [29190] [WARNING] Worker with pid 30093 was terminated due to signal 9
+[2021-05-30 18:37:25 +0800] [30329] [INFO] Booting worker with pid: 30329
+[2021-05-30 18:37:25 +0800] [30328] [INFO] Booting worker with pid: 30328
+[2021-05-30 18:37:25 +0800] [30330] [INFO] Booting worker with pid: 30330
+[2021-05-30 18:37:25 +0800] [30334] [INFO] Booting worker with pid: 30334
+[2021-05-30 18:37:55 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30328)
+[2021-05-30 18:37:55 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30329)
+[2021-05-30 18:37:55 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30330)
+[2021-05-30 18:37:55 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30334)
+[2021-05-30 18:37:55 +0800] [30329] [INFO] Worker exiting (pid: 30329)
+[2021-05-30 18:37:55 +0800] [30328] [INFO] Worker exiting (pid: 30328)
+[2021-05-30 18:37:55 +0800] [30334] [INFO] Worker exiting (pid: 30334)
+[2021-05-30 18:37:55 +0800] [30330] [INFO] Worker exiting (pid: 30330)
+[2021-05-30 18:37:55 +0800] [29190] [WARNING] Worker with pid 30330 was terminated due to signal 9
+[2021-05-30 18:37:55 +0800] [30477] [INFO] Booting worker with pid: 30477
+[2021-05-30 18:37:55 +0800] [29190] [WARNING] Worker with pid 30334 was terminated due to signal 9
+[2021-05-30 18:37:55 +0800] [30478] [INFO] Booting worker with pid: 30478
+[2021-05-30 18:37:55 +0800] [30479] [INFO] Booting worker with pid: 30479
+[2021-05-30 18:37:55 +0800] [30480] [INFO] Booting worker with pid: 30480
+[2021-05-30 18:38:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30477)
+[2021-05-30 18:38:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30478)
+[2021-05-30 18:38:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30479)
+[2021-05-30 18:38:25 +0800] [29190] [CRITICAL] WORKER TIMEOUT (pid:30480)
+[2021-05-30 18:38:25 +0800] [30477] [INFO] Worker exiting (pid: 30477)
+[2021-05-30 18:38:25 +0800] [30478] [INFO] Worker exiting (pid: 30478)
+[2021-05-30 18:38:25 +0800] [30479] [INFO] Worker exiting (pid: 30479)
+[2021-05-30 18:38:25 +0800] [30480] [INFO] Worker exiting (pid: 30480)
+[2021-05-30 18:38:25 +0800] [29190] [WARNING] Worker with pid 30479 was terminated due to signal 9
+[2021-05-30 18:38:25 +0800] [30737] [INFO] Booting worker with pid: 30737
+[2021-05-30 18:38:25 +0800] [29190] [WARNING] Worker with pid 30480 was terminated due to signal 9
+[2021-05-30 18:38:25 +0800] [30741] [INFO] Booting worker with pid: 30741
+[2021-05-30 18:38:25 +0800] [30742] [INFO] Booting worker with pid: 30742
+[2021-05-30 18:38:25 +0800] [30743] [INFO] Booting worker with pid: 30743
